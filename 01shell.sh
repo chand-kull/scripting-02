@@ -1,3 +1,3 @@
 #!/bin/bash 
 
-hey hai how are you all..................
+echo "hey hai how are you all.................."
