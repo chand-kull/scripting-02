@@ -2,10 +2,10 @@
 
 echo "place enter username"
 
-read "username"
+read -s "username"
 
 echo "place enter password"
 
-read "password"
+read -s "password"
 
 echo "username is $USERNAME: password is $PASSWORD"
