@@ -14,15 +14,15 @@ else
     echo "you are super user."
 fi
 
-yum install git -y
+dnf install git -y
 VALIDATE $? "INSTALLING GIT"
 
-yum install mysql-server -y
+dnf install mysql-server -y
 VALIDATE $? "INSTALLING MYSQL"
 
  
-yum install docker -y
+dnf install docker -y
 VALIDATE $? "INSTALLING DOCEKR "
   
-yum install maven -
+dnf install maven -
 VALIDATE $? "INSTALLING MAVEN "
