@@ -19,7 +19,7 @@ else
     echo "installation of git ........success."    
 fi
 
-yum install mysql -y
+yum install mysql-server -y
 if [ $? -ne 0 ]  
 then
     echo "installation of mysql .....failure"
@@ -27,6 +27,7 @@ then
 else 
     echo "installation of mysql ........success."    
 fi
+
  
 yum install docker -y
 if [ $? -ne 0 ]  
