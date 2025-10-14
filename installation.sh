@@ -1,51 +1,29 @@
-
 #!/bin/bash
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]
-then
-    echo "please run this script with root access"
+if [ $USERID -ne 0 ]; then
+    echo "Please run this script with root access."
     exit 1
 else
-    echo "you are super user."
+    echo "You are the super user."
 fi
 
-yum install git -y
+install_package() {
+    PACKAGE=$1
+    echo "Installing $PACKAGE..."
+    yum install -y $PACKAGE
 
-if [ $? -ne 0 ]  
-then
-    echo "installation of git .....failure"
-    exit 1
-else 
-    echo "installation of git ........success."    
-fi
+    if [ $? -ne 0 ]; then
+        echo "Installation of $PACKAGE ..... failure"
+        exit 1
+    else
+        echo "Installation of $PACKAGE ........ success."
+    fi
+}
 
-yum install mysql -y
-
-if [ $? -ne 0 ]  
-then
-    echo "installation of mysql .....failure"
-    exit 1
-else 
-    echo "installation of mysql ........success."    
-fi
- 
-yum install docker -y
-
-if [ $? -ne 0 ]  
-then
-    echo "installation of docker .....failure"
-    exit 1
-else 
-    echo "installation of docker ........success."    
-fi
-  
-yum install maven -y
-if [ $? -ne 0 ]  
-then
-    echo "installation of docker .....failure"
-    exit 1
-else 
-    echo "installation of docker ........success."    
-fi
+# Install required packages
+install_package git
+install_package mysql
+install_package docker
+install_package maven
