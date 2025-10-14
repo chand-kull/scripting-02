@@ -2,6 +2,10 @@
 
 USERID=$(id -u)
 
+VALIDATE(){
+
+}
+
 if [ $USERID -ne 0 ]
 then
     echo "please run this script with root access"
@@ -11,38 +15,14 @@ else
 fi
 
 yum install git -y
-if [ $? -ne 0 ]  
-then
-    echo "installation of git .....failure"
-    exit 1
-else 
-    echo "installation of git ........success."    
-fi
+VALIDATE $? "INSTALLING GIT"
 
 yum install mysql-server -y
-if [ $? -ne 0 ]  
-then
-    echo "installation of mysql .....failure"
-    exit 1
-else 
-    echo "installation of mysql ........success."    
-fi
+VALIDATE $? "INSTALLING MYSQL"
 
  
 yum install docker -y
-if [ $? -ne 0 ]  
-then
-    echo "installation of docker .....failure"
-    exit 1
-else 
-    echo "installation of docker ........success."    
-fi
+VALIDATE $? "INSTALLING DOCEKR "
   
-yum install maven -y
-if [ $? -ne 0 ]  
-then
-    echo "installation of maven .....failure"
-    exit 1
-else 
-    echo "installation of maven ........success."    
-fi
+yum install maven -
+VALIDATE $? "INSTALLING MAVEN "
