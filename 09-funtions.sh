@@ -10,3 +10,9 @@ then
 else
     echo "you are super user "
 fi 
+
+
+yum install mysql -y 
+
+
+yum install docker -y
