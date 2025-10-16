@@ -2,10 +2,6 @@
 
 USERID=$(id -u)
 
-VALIDATE(){
-
-}
-
 if [ $USERID -ne 0 ]
 
 then
