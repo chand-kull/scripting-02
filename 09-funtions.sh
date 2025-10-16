@@ -12,7 +12,8 @@ else
 fi 
 
 
-dnf install mysql -y 
+yum install mysql-server -y
+
 
 
 yum install docker -y
