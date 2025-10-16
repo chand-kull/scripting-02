@@ -13,7 +13,7 @@ fi
 
 
 yum install mysql -y 
-VALIDATE $? "installing MYSQL."
+
 
 yum install docker -y
-VALIDATE $? "installing docker."
+
