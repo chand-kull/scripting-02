@@ -1,7 +1,6 @@
 #!/bin/bash
 
 USERID=$(id -u)
-
 if [ $USERID -ne 0 ]
 
 then
@@ -16,3 +15,6 @@ VALIDATE $? "installing MYSQL."
 
 dnf install git -y
 VALIDATE $? "installing git"
+
+dnf install maven -y 
+VALIDATE $? "installing maven"
