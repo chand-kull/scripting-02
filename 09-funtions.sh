@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USERID=$(id -u)
+Replace `if` with `fi` on line 12. The corrected function:
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -9,8 +10,10 @@ VALIDATE(){
         exit 1
     else
         echo "$2......SUCCESS"
-    if
+    fi
 }
+
+
     
 
 if [ $USERID -ne 0 ]
