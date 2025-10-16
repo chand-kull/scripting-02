@@ -12,7 +12,8 @@ else
 fi 
 
 
-yum install mysql -y 
-
+yum install gcp -y 
+VALIDATE $? "installing gcp."
 
 yum install docker -y
+VALIDATE $? "installing docker."
