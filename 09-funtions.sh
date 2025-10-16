@@ -2,6 +2,10 @@
 
 USERID=$(id -u)
 
+VALIDATE(){
+    
+}
+
 if [ $USERID -ne 0 ]
 
 then
@@ -12,8 +16,8 @@ else
 fi 
 
 
-yum install mysql -y 
+dnf install mysql -y 
 VALIDATE $? "installing MYSQL."
 
-yum install docker -y
+dnf install docker -y
 VALIDATE $? "installing docker"
