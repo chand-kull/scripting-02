@@ -3,7 +3,7 @@
 USERID=$(id -u)
 
 VALIDATE(){
-    
+
 }
 
 if [ $USERID -ne 0 ]
@@ -15,9 +15,8 @@ else
     echo "you are super user "
 fi 
 
-
 dnf install mysql -y 
 VALIDATE $? "installing MYSQL."
 
-dnf install docker -y
-VALIDATE $? "installing docker"
+dnf install git -y
+VALIDATE $? "installing git"
