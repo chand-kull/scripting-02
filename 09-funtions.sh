@@ -1,7 +1,6 @@
 #!/bin/bash
 
-USERID=$(id -u)
-Replace `if` with `fi` on line 12. The corrected function:
+USERID=$(id -u) 
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -14,7 +13,7 @@ VALIDATE(){
 }
 
 
-    
+
 
 if [ $USERID -ne 0 ]
 then
