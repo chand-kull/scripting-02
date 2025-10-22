@@ -1,4 +1,11 @@
-#!/bin/bash 
+#!/bin/bash
 
+echo "please enter username "
 
-<h1> hey hai all </h1>
+read -s USERNAME
+
+echo "please enter password"
+
+read -s PASSWORD 
+
+echo "username is : $USERNAME , password is $PASSWORD,"
